@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Patient History Section</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- CSS FILE -->
+  <link rel="stylesheet" href="patienthistory.css">
+</head>
+
+<body>
+
+
+
+  <!-- HEADER -->
+  <nav class="navbar">
+    <div class="logo">🦋 ThyroScan</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><button onclick="logoutUser()">Logout</button></li>
+    </ul>
+  </nav>
+
+  <div class="layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <h2>Menu</h2>
+
+      <button class="menu" onclick="window.location.href='clinic_administrator_dashboard.html'">
+        <i data-lucide="layout-dashboard"></i> Dashboard
+      </button>
+
+      <button class="menu" onclick="window.location.href='doctor.html'">
+        <i data-lucide="users"></i> Doctors
+      </button>
+
+      <button class="menu active">
+        <i data-lucide="clipboard-list"></i> Patients History
+      </button>
+
+      <!-- ✅ FIXED -->
+      <button class="menu" onclick="window.location.href='analytics.html'">
+        <i data-lucide="bar-chart-3"></i> Analytics
+      </button>
+
+      <!-- ✅ FIXED -->
+      <button class="menu" onclick="window.location.href='report_clinic.html'">
+        <i data-lucide="file-text"></i> Reports
+      </button>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <div class="main">
+
+      <h2>Patient History</h2>
+      <p>Manage patient appointments and serial numbers</p>
+
+      <!-- STATS -->
+      <div class="grid">
+
+        <div class="card">
+          <p>Total</p>
+          <h2>6</h2>
+        </div>
+
+        <div class="card">
+          <p>Pending</p>
+          <h2>3</h2>
+        </div>
+
+        <div class="card">
+          <p>Confirmed</p>
+          <h2>2</h2>
+        </div>
+
+        <div class="card">
+          <p>Completed</p>
+          <h2>1</h2>
+        </div>
+
+      </div>
+
+      <!-- TABLE -->
+      <div class="table-container">
+
+        <div class="table-header">Patient History</div>
+
+        <table>
+
+          <thead>
+            <tr>
+              <th>Serial</th>
+              <th>Patient</th>
+              <th>Doctor</th>
+              <th>Date</th>
+              <th>Diagnosis No.</th>
+              <th>Type</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+
+          <tbody>
+
+            <tr>
+              <td>#101</td>
+              <td>John Doe <br><small>0123456789</small></td>
+              <td>Dr. Ahmed</td>
+              <td>2026-04-17</td>
+              <td>3</td>
+              <td>checkup</td>
+              <td><select>
+                  <option>pending</option>
+                  <option>confirmed</option>
+                  <option>completed</option>
+                </select></td>
+              <td><button class="action-btn">📞</button><button class="action-btn">✉</button></td>
+            </tr>
+
+            <tr>
+              <td>#102</td>
+              <td>Sara Khan <br><small>0199999999</small></td>
+              <td>Dr. Rahman</td>
+              <td>2026-04-18</td>
+              <td>5</td>
+              <td>follow-up</td>
+              <td><select>
+                  <option>pending</option>
+                  <option selected>confirmed</option>
+                  <option>completed</option>
+                </select></td>
+              <td><button class="action-btn">📞</button><button class="action-btn">✉</button></td>
+            </tr>
+
+            <tr>
+              <td>#103</td>
+              <td>Ahmad Hassan <br><small>0188888888</small></td>
+              <td>Dr. Sarah Khan</td>
+              <td>2026-04-18</td>
+              <td>2</td>
+              <td>consultation</td>
+              <td><select>
+                  <option>pending</option>
+                  <option>confirmed</option>
+                  <option>completed</option>
+                </select></td>
+              <td><button class="action-btn">📞</button><button class="action-btn">✉</button></td>
+            </tr>
+
+            <tr>
+              <td>#104</td>
+              <td>Fatima Ali <br><small>0177777777</small></td>
+              <td>Dr. Ahmed</td>
+              <td>2026-04-19</td>
+              <td>7</td>
+              <td>checkup</td>
+              <td><select>
+                  <option>pending</option>
+                  <option>confirmed</option>
+                  <option>completed</option>
+                </select></td>
+              <td><button class="action-btn">📞</button><button class="action-btn">✉</button></td>
+            </tr>
+
+            <tr>
+              <td>#105</td>
+              <td>Omar Khalid <br><small>0166666666</small></td>
+              <td>Dr. Rahman</td>
+              <td>2026-04-19</td>
+              <td>4</td>
+              <td>follow-up</td>
+              <td><select>
+                  <option>pending</option>
+                  <option>confirmed</option>
+                  <option selected>completed</option>
+                </select></td>
+              <td><button class="action-btn">📞</button><button class="action-btn">✉</button></td>
+            </tr>
+
+            <tr>
+              <td>#106</td>
+              <td>Nusrat Jahan <br><small>0155555555</small></td>
+              <td>Dr. Sarah Khan</td>
+              <td>2026-04-20</td>
+              <td>6</td>
+              <td>consultation</td>
+              <td><select>
+                  <option selected>pending</option>
+                  <option>confirmed</option>
+                  <option>completed</option>
+                </select></td>
+              <td><button class="action-btn">📞</button><button class="action-btn">✉</button></td>
+            </tr>
+
+          </tbody>
+
+        </table>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+    lucide.createIcons();
+    function logoutUser() {
+      sessionStorage.removeItem("patientName");
+      alert("You have been logged out.");
+      window.location.href = "login.html";
+    }
+  </script>
+
+</body>
+
+</html>
